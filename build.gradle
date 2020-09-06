@@ -1,5 +1,8 @@
 buildscript {
     repositories {
+        maven { url = 'http://gradle.otakusaikou.com/releases' }
+        maven { url = 'https://maven.aliyun.com/repository/central' }
+        maven { url = 'https://maven.aliyun.com/repository/jcenter' }
         maven { url = 'https://files.minecraftforge.net/maven' }
         jcenter()
         mavenCentral()
@@ -14,8 +17,8 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = '1.0'
-group = 'com.yourname.modid' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'modid'
+group = 'com.github.wwjdmm.simpletech' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'simpletech'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
@@ -115,9 +118,9 @@ dependencies {
 jar {
     manifest {
         attributes([
-            "Specification-Title": "examplemod",
+            "Specification-Title": "simpletech",
             "Specification-Vendor": "examplemodsareus",
-            "Specification-Version": "1", // We are version 1 of ourselves
+            "Specification-Version": "1.0.1", // We are version 1 of ourselves
             "Implementation-Title": project.name,
             "Implementation-Version": "${version}",
             "Implementation-Vendor" :"examplemodsareus",
